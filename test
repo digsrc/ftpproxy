@@ -1,0 +1,18 @@
+getsockopt(0, SOL_IP, SO_ORIGINAL_DST, &sock, &socksize)
+
+/* Put the current value for socket FD's option OPTNAME at protocol level LEVEL
+   into OPTVAL (which is *OPTLEN bytes long), and set *OPTLEN to the value's
+   actual length.  Returns 0 on success, -1 for errors.  */
+extern int getsockopt (int __fd, int __level, int __optname, void *__restrict __optval, socklen_t *__restrict __optlen) __THROW;
+
+
+
+/* Put the current value for socket FD's option OPTNAME at protocol level LEVEL
+   into OPTVAL (which is *OPTLEN bytes long), and set *OPTLEN to the value's
+   actual length.  Returns 0 on success, -1 for errors.  */
+extern int getsockopt (int __fd, int __level, int __optname, void *__restrict __optval, socklen_t *__restrict __optlen) __THROW;
+
+
+ftp.c:1899: warning: passing argument 5 of 'getsockopt' from incompatible pointer type
+/usr/include/sys/socket.h:190: note: expected 'socklen_t * __restrict__' but argument is of type 'size_t *'
+

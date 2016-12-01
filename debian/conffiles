@@ -1,0 +1,3 @@
+/etc/init.d/ftpproxy
+/etc/default/ftpproxy
+/etc/ftpproxy.conf

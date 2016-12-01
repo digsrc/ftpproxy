@@ -1,0 +1,8 @@
+Format: 1.5
+Distribution: unstable
+Date: $(DATE)
+Source: $(PACKAGE)
+Urgency: low
+Priority: optional
+Changed-By: Wolfgang Zekoll <wzk@quietsche-entchen.de>
+Changes: N/A

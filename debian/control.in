@@ -1,0 +1,11 @@
+
+Package: $(PACKAGE)
+Version: $(VERSION)-$(DEBRELEASE)
+Section: net
+Priority: optional
+Architecture: i386
+Depends: libc6 (>= 2.3.6)
+Installed-Size: $(SIZE)
+Maintainer: Andreas Schoenberg <asg@ftpproxy.org>
+Description: ftpproxy is an application level gateway for FTP.
+

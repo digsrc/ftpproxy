@@ -1,0 +1,287 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CCP_ERROR	ftp.h	139;"	d
+CCP_OK	ftp.h	138;"	d
+DIR_MAXDEPTH	ftp.h	135;"	d
+ERR_ACCESS	procinfo.h	17;"	d
+ERR_ANY	procinfo.h	27;"	d
+ERR_CLIENT	procinfo.h	21;"	d
+ERR_CONFIG	procinfo.h	24;"	d
+ERR_CONNECT	procinfo.h	18;"	d
+ERR_ERRORMASK	procinfo.h	13;"	d
+ERR_EXITCODEMASK	procinfo.h	11;"	d
+ERR_OK	procinfo.h	23;"	d
+ERR_OTHER	procinfo.h	25;"	d
+ERR_PROXY	procinfo.h	22;"	d
+ERR_SERVER	procinfo.h	20;"	d
+ERR_STDERR	procinfo.h	15;"	d
+ERR_SYSTEM	procinfo.h	26;"	d
+ERR_TIMEOUT	procinfo.h	19;"	d
+ERR_ZEROEXITCODE	procinfo.h	12;"	d
+FCEM_5XX	ftp.h	62;"	d
+FCEM_CONTINUE	ftp.h	61;"	d
+FCEM_TERMINATE	ftp.h	63;"	d
+FCE_CLOSEFILE	ftp.h	68;"	d
+FCE_CREATEDATA	ftp.h	65;"	d
+FCE_CREATEDIR	ftp.h	67;"	d
+FCE_CREATEINFO	ftp.h	66;"	d
+FCE_WRITEDATA	ftp.h	69;"	d
+FTPMAXBSIZE	ftp.h	49;"	d
+LOGFACILITY	main.c	56;"	d	file:
+LOGFACILITY	main.c	58;"	d	file:
+MODE_PASSIVE	ftp.h	147;"	d
+MODE_PORT	ftp.h	146;"	d
+OP_GET	ftp.h	149;"	d
+OP_PUT	ftp.h	150;"	d
+PIDFILE	ftp.h	155;"	d
+PORT_CLOSED	ftp.h	144;"	d
+PORT_CONNECTED	ftp.h	143;"	d
+PORT_LISTEN	ftp.h	142;"	d
+PROXYNAME	procinfo.h	8;"	d
+REDIR_ACCEPT	ftp.h	52;"	d
+REDIR_FORWARD	ftp.h	53;"	d
+REDIR_FORWARD_ONLY	ftp.h	54;"	d
+REDIR_NONE	ftp.h	51;"	d
+SYSLOG_NAMES	main.c	27;"	d	file:
+TYPE_ASC	ftp.h	152;"	d
+TYPE_BIN	ftp.h	153;"	d
+_FTP_INCLUDED	ftp.h	30;"	d
+_IP_LIB_INCLUDED	ip-lib.h	26;"	d
+_LIB_INCLUDED	lib.h	25;"	d
+_PROCINFO_INCLUDED	procinfo.h	3;"	d
+__init_filecopy	ftp.h	77;"	d
+_bio	ftp.h	/^typedef struct _bio {$/;"	s
+_config	ftp.h	/^typedef struct _config {$/;"	s
+_cp	ftp.h	/^    struct _cp {$/;"	s	struct:_ftp
+_dtc	ftp.h	/^typedef struct _dtc {$/;"	s
+_errortype	procinfo.c	/^struct _errortype {$/;"	s	file:
+_ftp	ftp.h	/^typedef struct _ftp {$/;"	s
+_ftpcmd	ftp.c	/^typedef struct _ftpcmd {$/;"	s	file:
+_getipnum	ftp.c	/^char *_getipnum(char *line, char **here, char *ip, int size)$/;"	f
+_getport	ftp.c	/^unsigned long _getport(char *line, char **here)$/;"	f
+_init_lower	lib.c	/^static int _init_lower()$/;"	f	file:
+_init_upper	lib.c	/^static int _init_upper()$/;"	f	file:
+_peer	ip-lib.h	/^typedef struct _peer {$/;"	s
+_port	ftp.h	/^typedef struct _port {$/;"	s
+_procinfo	procinfo.h	/^typedef struct _procinfo {$/;"	s
+acceptloop	daemon.c	/^int acceptloop(int sock)$/;"	f
+acp	ftp.h	/^    char	acp[200];$/;"	m	struct:_config
+active	ftp.h	/^    int		active;$/;"	m	struct:_dtc
+alarm_handler	ip-lib.c	/^static void alarm_handler()$/;"	f	file:
+allocate	lib.c	/^void *allocate(size_t size)$/;"	f
+allow_anyremote	ftp.h	/^    int		allow_anyremote;$/;"	m	struct:_config
+allow_blanks	ftp.h	/^    int		allow_blanks;$/;"	m	struct:_config
+allow_passwdblanks	ftp.h	/^    int		allow_passwdblanks;$/;"	m	struct:_config
+basedir	ftp.h	/^	char	basedir[200];		\/* base directory for copy files (filecopy 2.1.2) *\/$/;"	m	struct:_config::__anon1
+basename	ftp.h	/^	char		basename[200];		\/* Name of transfered file without path *\/$/;"	m	struct:_ftp::_cp
+bind_to_port	ip-lib.c	/^int bind_to_port(char *interface, unsigned int port)$/;"	f
+bindport	main.c	/^int	bindport =		0;$/;"	v
+bio	ftp.h	/^	bio_t   bio;$/;"	m	struct:_ftp::__anon2
+bio_t	ftp.h	/^    } bio_t;$/;"	t	typeref:struct:_bio
+bsize	ftp.h	/^    int		bsize;$/;"	m	struct:_config
+btc	ftp.h	/^    unsigned long	btc, bts;$/;"	m	struct:_ftp
+bts	ftp.h	/^    unsigned long	btc, bts;$/;"	m	struct:_ftp
+buffer	ftp.h	/^    char	buffer[512];$/;"	m	struct:_bio
+bytes	ftp.h	/^    unsigned long bytes;$/;"	m	struct:_dtc
+cbuf	ftp.h	/^    bio_t		cbuf, sbuf;$/;"	m	struct:_ftp
+ccp	ftp.h	/^    char	ccp[200];$/;"	m	struct:_config
+ccpcoll	ftp.h	/^    int			ccpcoll;$/;"	m	struct:_ftp
+cfd	ftp.h	/^	int		cfd;		\/* Datenverbindung zum Client *\/$/;"	m	struct:_ftp::__anon4
+cfgets	ftp.c	/^char *cfgets(ftp_t *x, char *line, int size)$/;"	f
+cfputs	ftp.c	/^int cfputs(ftp_t *x, char *line)$/;"	f
+ch	ftp.h	/^    dtc_t		ch;$/;"	m	struct:_ftp
+client	ftp.h	/^	} client;$/;"	m	struct:_ftp	typeref:struct:_ftp::__anon2
+client	ftp.h	/^    port_t	client;$/;"	m	struct:_dtc
+close_ch	ftp.c	/^int close_ch(ftp_t *x, dtc_t *ch)$/;"	f
+cmdtab	ftp.c	/^ftpcmd_t cmdtab[] = {$/;"	v
+command	ftp.h	/^    char	command[20];	\/* Fuer syslog Meldungen *\/$/;"	m	struct:_dtc
+commands	ftp.h	/^    int			commands;$/;"	m	struct:_ftp
+config	ftp.h	/^    config_t	*config;$/;"	m	struct:_ftp
+config_t	ftp.h	/^    } config_t;$/;"	t	typeref:struct:_config
+configfile	ftp.h	/^    char	configfile[200];$/;"	m	struct:_config
+copy_string	lib.c	/^char *copy_string(char *y, char *x, int len)$/;"	f
+copyfd	ftp.h	/^    int		copyfd;		\/* file handle to copy file (filecopy 2.2.4) *\/$/;"	m	struct:_dtc
+count	ftp.h	/^	int		count;			\/* File transfer counter *\/$/;"	m	struct:_ftp::_cp
+cp	ftp.h	/^	} cp;$/;"	m	struct:_config	typeref:struct:_config::__anon1
+cp	ftp.h	/^	} cp;$/;"	m	struct:_ftp	typeref:struct:_ftp::_cp
+create	ftp.h	/^	int		create;			\/* Create copy or not *\/$/;"	m	struct:_ftp::_cp
+createcopies	ftp.h	/^	int	createcopies;		\/* copy mode active or not (filecopy 2.1.1) *\/$/;"	m	struct:_config::__anon1
+ctp	ftp.h	/^    char	ctp[200];$/;"	m	struct:_config
+cwd	ftp.h	/^    char		cwd[200];$/;"	m	struct:_ftp
+daemonmode	main.c	/^int	daemonmode =		0;$/;"	v
+dataport	ftp.h	/^    unsigned int dataport;$/;"	m	struct:_config
+debug	main.c	/^int	debug =			0;$/;"	v
+dofeat	ftp.c	/^int dofeat(ftp_t *x)$/;"	f
+dofilecopyerror	filecopy.c	/^int dofilecopyerror(ftp_t *x, int error, char *par)$/;"	f
+dologin	ftp.c	/^int dologin(ftp_t *x)$/;"	f
+dopasv	ftp.c	/^int dopasv(ftp_t *x, char *command, char *par)$/;"	f
+doport	ftp.c	/^int doport(ftp_t *x, char *command, char *par)$/;"	f
+doquit	ftp.c	/^int doquit(ftp_t *x)$/;"	f
+dotransparentlogin	ftp.c	/^int dotransparentlogin(ftp_t *x)$/;"	f
+dtc_t	ftp.h	/^    } dtc_t;$/;"	t	typeref:struct:_dtc
+errormode	ftp.h	/^	int	errormode;		\/* what to do on error: continue, 5xx, terminate? (filecopy 2.1.3) *\/$/;"	m	struct:_config::__anon1
+errortype	procinfo.c	/^    } errortype[] = {$/;"	v	typeref:struct:_errortype
+exithandler	procinfo.c	/^void exithandler(void)$/;"	f
+exithandler	procinfo.h	/^    char	exithandler[400];$/;"	m	struct:_procinfo
+extralog	main.c	/^int	extralog =		0;$/;"	v
+fd	ftp.h	/^	} fd;$/;"	m	struct:_ftp	typeref:struct:_ftp::__anon4
+fdset	ftp.h	/^	fd_set		fdset;$/;"	m	struct:_ftp::__anon4
+filename	ftp.h	/^	char		filename[200];		\/* Name of local copy *\/$/;"	m	struct:_ftp::_cp
+filename	ftp.h	/^    char	filename[200];$/;"	m	struct:_dtc
+filepath	ftp.h	/^    char		filepath[200];$/;"	m	struct:_ftp
+ftp_t	ftp.h	/^    } ftp_t;$/;"	t	typeref:struct:_ftp
+ftpcmd_t	ftp.c	/^    } ftpcmd_t;$/;"	t	typeref:struct:_ftpcmd	file:
+get_client_info	ftp.c	/^int get_client_info(ftp_t *x, int pfd)$/;"	f
+get_exithandler	procinfo.c	/^char *get_exithandler(void)$/;"	f
+get_ftpdir	ftp.c	/^int get_ftpdir(ftp_t *x)$/;"	f
+get_ftppath	ftp.c	/^int get_ftppath(ftp_t *x, char *path)$/;"	f
+get_interface_info	ip-lib.c	/^unsigned int get_interface_info(int pfd, peer_t *sock)$/;"	f
+get_number	config.c	/^static unsigned int get_number(char **from, char *par, char *filename, int lineno)$/;"	f	file:
+get_parameter	config.c	/^static char *get_parameter(char **from, char *par, char *value, int size,$/;"	f	file:
+get_port	ip-lib.c	/^unsigned int get_port(char *server, unsigned int def_port)$/;"	f
+get_quoted	lib.c	/^char *get_quoted(char **from, int delim, char *to, int max)$/;"	f
+get_word	lib.c	/^char *get_word(char **from, char *to, int maxlen)$/;"	f
+get_yesno	config.c	/^static int get_yesno(char **from, char *par, char *filename, int lineno)$/;"	f	file:
+getc_fd	ftp.c	/^int getc_fd(ftp_t *x, int fd)$/;"	f
+getcmd	ftp.c	/^ftpcmd_t *getcmd(char *name)$/;"	f
+getfacility	main.c	/^int getfacility(char *s)$/;"	f
+getpidfile	procinfo.c	/^char *getpidfile()$/;"	f
+getportnum	ip-lib.c	/^unsigned int getportnum(char *name)$/;"	f
+getstatdir	procinfo.c	/^char *getstatdir()$/;"	f
+getstatfp	procinfo.c	/^FILE *getstatfp(void)$/;"	f
+getstatusline	main.c	/^char *getstatusline(char *status)$/;"	f
+getvar	procinfo.c	/^char *getvar(char *var)$/;"	f
+getvarname	ftp.c	/^static char *getvarname(char **here, char *var, int size)$/;"	f	file:
+here	ftp.h	/^    int		here, len;$/;"	m	struct:_bio
+home	ftp.h	/^    char		home[200];$/;"	m	struct:_ftp
+i	ftp.h	/^    peer_t      i;		\/* Proxy server's interface to client *\/$/;"	m	struct:_ftp
+infofile	ftp.h	/^	char		infofile[200];		\/* Name of local infofile *\/$/;"	m	struct:_ftp::_cp
+init_procinfo	procinfo.c	/^int init_procinfo(char *vp)$/;"	f
+initfilecopy	filecopy.c	/^int initfilecopy(ftp_t *x, char *op, char *filename)$/;"	f
+inside	ftp.h	/^    peer_t	inside;$/;"	m	struct:_dtc
+ipnum	ftp.h	/^	char    ipnum[100];$/;"	m	struct:_ftp::__anon2
+ipnum	ftp.h	/^	char    ipnum[100];$/;"	m	struct:_ftp::__anon5
+ipnum	ftp.h	/^    char	ipnum[80];$/;"	m	struct:_port
+ipnum	ip-lib.h	/^	char        ipnum[40];$/;"	m	struct:_peer
+islowercase	lib.c	/^int islowercase(unsigned int c)$/;"	f
+isock	ftp.h	/^    int		isock;$/;"	m	struct:_dtc
+ispath	ftp.c	/^    int		par, ispath, useccp;$/;"	m	struct:_ftpcmd	file:
+isuppercase	lib.c	/^int isuppercase(unsigned int c)$/;"	f
+len	ftp.h	/^    int		here, len;$/;"	m	struct:_bio
+local	ftp.h	/^	} local;$/;"	m	struct:_ftp	typeref:struct:_ftp::__anon3
+log	ftp.c	/^    int		log;$/;"	m	struct:_ftpcmd	file:
+logfacility	main.c	/^int	logfacility =		LOGFACILITY;$/;"	v
+logname	main.c	/^char	logname[80] =		"";$/;"	v
+logusername	ftp.h	/^    char		logusername[100];$/;"	m	struct:_ftp
+lower	lib.c	/^static unsigned int lower[256], upper[256];$/;"	v	file:
+lowercase	lib.c	/^unsigned int lowercase(unsigned int c)$/;"	f
+main	main.c	/^int main(int argc, char *argv[], char *envp[])$/;"	f
+mainpid	procinfo.h	/^    int		mainpid;$/;"	m	struct:_procinfo
+max	ftp.h	/^	int		max;$/;"	m	struct:_ftp::__anon4
+missing_arg	main.c	/^void missing_arg(int c, char *string)$/;"	f
+mode	ftp.h	/^    int		mode;		\/* PORT oder PASV *\/$/;"	m	struct:_dtc
+monitor	ftp.h	/^    int		monitor;$/;"	m	struct:_config
+name	ftp.c	/^    char	name[20];$/;"	m	struct:_ftpcmd	file:
+name	ftp.h	/^	char    name[200];$/;"	m	struct:_ftp::__anon2
+name	ip-lib.h	/^	char        name[80];$/;"	m	struct:_peer
+name	procinfo.c	/^    char	name[20];$/;"	m	struct:_errortype	file:
+noctrl	lib.c	/^char *noctrl(char *buffer)$/;"	f
+num	procinfo.c	/^    int		num;$/;"	m	struct:_errortype	file:
+numeric_only	ftp.h	/^    int		numeric_only;$/;"	m	struct:_config
+openip	ip-lib.c	/^int openip(char *host, unsigned int port, char *srcip, unsigned int srcport)$/;"	f
+operation	ftp.h	/^    int		operation;	\/* GET oder PUT *\/$/;"	m	struct:_dtc
+origdst	ftp.h	/^	} origdst;$/;"	m	struct:_ftp	typeref:struct:_ftp::__anon5
+osock	ftp.h	/^    int		osock;$/;"	m	struct:_dtc
+other	ftp.h	/^    int		other;$/;"	m	struct:_dtc
+outside	ftp.h	/^    peer_t	outside;$/;"	m	struct:_dtc
+par	ftp.c	/^    int		par, ispath, useccp;$/;"	m	struct:_ftpcmd	file:
+password	ftp.h	/^	char	password[80];$/;"	m	struct:_ftp::__anon3
+password	ftp.h	/^	char    password[80];$/;"	m	struct:_ftp::__anon2
+password	ftp.h	/^    char	password[200];		\/* ... and password for server login. *\/$/;"	m	struct:_ftp
+peer_t	ip-lib.h	/^	} peer_t;$/;"	t	typeref:struct:_peer
+pi	procinfo.c	/^procinfo_t pi;$/;"	v
+pidfile	procinfo.h	/^    char	pidfile[200];$/;"	m	struct:_procinfo
+port	ftp.h	/^	unsigned int port;$/;"	m	struct:_ftp::__anon5
+port	ftp.h	/^    unsigned int port;$/;"	m	struct:_port
+port	ip-lib.h	/^	unsigned int port;$/;"	m	struct:_peer
+port_t	ftp.h	/^    } port_t;$/;"	t	typeref:struct:_port
+printconfig	config.c	/^int printconfig(config_t *config)$/;"	f
+printerror	main.c	/^int printerror(int rc, char *type, char *format, ...)$/;"	f
+printnum	config.c	292;"	d	file:
+printstring	config.c	293;"	d	file:
+printyesno	config.c	291;"	d	file:
+procinfo_t	procinfo.h	/^    } procinfo_t;$/;"	t	typeref:struct:_procinfo
+progname	main.c	/^char	progname[80] =		"";$/;"	v
+program	main.c	/^char	*program =		"";$/;"	v
+proxy_request	ftp.c	/^int proxy_request(config_t *config)$/;"	f
+readconfig	config.c	/^int readconfig(config_t *config, char *filename, char *section)$/;"	f
+readline_fd	ftp.c	/^char *readline_fd(ftp_t *x, int fd, char *line, int size)$/;"	f
+reallocate	lib.c	/^void *reallocate(void *p, size_t size)$/;"	f
+redirmode	ftp.h	/^    int 	redirmode;$/;"	m	struct:_config
+resp	ftp.c	/^    int		resp;$/;"	m	struct:_ftpcmd	file:
+run_acp	ftp.c	/^int run_acp(ftp_t *x)$/;"	f
+run_ccp	ftp.c	/^int run_ccp(ftp_t *x, char *cmd, char *par)$/;"	f
+run_ctp	ftp.c	/^int run_ctp(ftp_t *x)$/;"	f
+run_exithandler	procinfo.c	/^int run_exithandler(int error, char *line)$/;"	f
+sbuf	ftp.h	/^    bio_t		cbuf, sbuf;$/;"	m	struct:_ftp
+seen150	ftp.h	/^    int		seen150;$/;"	m	struct:_dtc
+selectserver	ftp.h	/^    int		selectserver;$/;"	m	struct:_config
+server	ftp.h	/^	int		server;		\/* Kontrollverbindung zum Server *\/$/;"	m	struct:_ftp::__anon4
+server	ftp.h	/^    char	server[200];		\/* FTP server *\/$/;"	m	struct:_config
+server	ftp.h	/^    peer_t		server;$/;"	m	struct:_ftp
+server	ftp.h	/^    port_t	server;$/;"	m	struct:_dtc
+serverdelim	ftp.h	/^    char	serverdelim[20];$/;"	m	struct:_config
+serverlist	ftp.h	/^    char	*serverlist;$/;"	m	struct:_config
+session	ftp.h	/^    char		session[80];$/;"	m	struct:_ftp
+sessiondir	procinfo.c	/^char	sessiondir[200] =	"";$/;"	v
+set_exithandler	procinfo.c	/^char *set_exithandler(char *handler)$/;"	f
+set_signals	main.c	/^int set_signals(void)$/;"	f
+setnumvar	procinfo.c	/^int setnumvar(char *var, unsigned long val)$/;"	f
+setpidfile	procinfo.c	/^char *setpidfile(char *pidfile)$/;"	f
+setsessionvar	main.c	/^int setsessionvar(char *state, char *varname, char *format, ...)$/;"	f
+setstatdir	procinfo.c	/^char *setstatdir(char *dir)$/;"	f
+setvar	procinfo.c	/^int setvar(char *var, char *value)$/;"	f
+sfd	ftp.h	/^	int		sfd;		\/* Datenverbindung zum Server *\/$/;"	m	struct:_ftp::__anon4
+sfgets	ftp.c	/^char *sfgets(ftp_t *x, char *line, int size)$/;"	f
+sfputc	ftp.c	/^int sfputc(ftp_t *x, char *command, char *parameter, char *line, int size, char **here)$/;"	f
+sfputs	ftp.c	/^int sfputs(ftp_t *x, char *format, ...)$/;"	f
+showconfig	main.c	/^int	showconfig =		0;$/;"	v
+signal_handler	main.c	/^void signal_handler(int sig)$/;"	f
+skip_ws	lib.c	/^char *skip_ws(char *string)$/;"	f
+sourceip	ftp.h	/^    char	sourceip[200];$/;"	m	struct:_config
+split	lib.c	/^int split(char *line, char *ptr[], int sep, int max)$/;"	f
+standalone	ftp.h	/^    int		standalone;$/;"	m	struct:_config
+start1	ftp.h	/^    struct timeval start1, start2;	\/* Timestamps *\/$/;"	m	struct:_dtc	typeref:struct:_dtc::timeval
+start2	ftp.h	/^    struct timeval start1, start2;	\/* Timestamps *\/$/;"	m	struct:_dtc	typeref:struct:_dtc::
+started	ftp.h	/^	unsigned long	started;		\/* Transfer start time *\/$/;"	m	struct:_ftp::_cp
+started	ftp.h	/^    unsigned long	started;$/;"	m	struct:_ftp
+statdir	procinfo.c	/^char	statdir[200] =		"";$/;"	v
+state	ftp.h	/^    int		state;		\/* LISTEN, CONNECTED, CLOSED *\/$/;"	m	struct:_dtc
+state	ftp.h	/^    int 	state;$/;"	m	struct:_ftp
+statfile	procinfo.h	/^    char	statfile[200];$/;"	m	struct:_procinfo
+statfp	procinfo.h	/^    FILE	*statfp;$/;"	m	struct:_procinfo
+strlwr	lib.c	/^char *strlwr(char *string)$/;"	f
+strpcmp	lib.c	/^int strpcmp(char *string, char *pattern)$/;"	f
+strupr	lib.c	/^char *strupr(char *string)$/;"	f
+strxchr	lib.c	/^char *strxchr(char *string, char *delim, int right)$/;"	f
+subdir	ftp.h	/^	char	subdir[80];		\/* strftime() format parameter to compute sub directory (filecopy 2.1.4) *\/$/;"	m	struct:_config::__anon1
+timeout	ftp.h	/^    int		timeout;$/;"	m	struct:_config
+transparentlogin	ftp.h	/^    int		transparentlogin;$/;"	m	struct:_config
+type	ftp.h	/^    int		type;		\/* Transfer type for xferlog *\/$/;"	m	struct:_dtc
+upper	lib.c	/^static unsigned int lower[256], upper[256];$/;"	v	file:
+uppercase	lib.c	/^unsigned int uppercase(unsigned int c)$/;"	f
+use_last_at	ftp.h	/^    int		use_last_at;$/;"	m	struct:_config
+useccp	ftp.c	/^    int		par, ispath, useccp;$/;"	m	struct:_ftpcmd	file:
+username	ftp.h	/^	char	username[80];$/;"	m	struct:_ftp::__anon3
+username	ftp.h	/^	char    username[200];$/;"	m	struct:_ftp::__anon2
+username	ftp.h	/^    char	username[200];		\/* Username ... *\/$/;"	m	struct:_ftp
+varprefix	procinfo.c	/^char	varprefix[40] =		"FTP_";$/;"	v
+writeinfofile	filecopy.c	/^int writeinfofile(ftp_t *x, char *ftpstatus)$/;"	f
+writepidfile	procinfo.c	/^int writepidfile()$/;"	f
+writestatfile	main.c	/^int writestatfile(ftp_t *x, char *status)$/;"	f
+xferlog	ftp.h	/^    char	xferlog[200];$/;"	m	struct:_config
+xlfp	ftp.h	/^    FILE		*xlfp;$/;"	m	struct:_ftp

@@ -1,0 +1,16 @@
+
+/etc/default
+	samples/default-ftpproxy: ftpproxy
+
+/etc/init.d
+	samples/rc-ftpproxy: ftpproxy
+
+/etc
+	samples/ftpproxy.conf
+
+/usr/sbin
+	src/ftp.proxy
+
+/usr/share/man/man1
+	doc/ftp.proxy.1
+
