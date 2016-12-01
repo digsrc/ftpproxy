@@ -1,0 +1,305 @@
+
+** Notice: Version 1.0.2 - 1.0.6 and 1.0.9 - 1.1.1 were never released
+           to the public.
+
+Version 1.2.3
+- --------------------------------
+
+  * Fixed bug in waitpid handling in daemon mode.
+
+  * Added optional xferlog logging.
+  
+  * Added -q option to set the source IP of the outgoing control
+    connection (which set also the IP for data connections).
+
+
+Version 1.2.2 - 16122003asg
+- --------------------------------
+
+  * Fixed a error in ending an connection after receiving "QUIT".
+
+  * Added support for configuration files. Two new parameters are
+    added for this. (-f and -F)
+
+  * renamed `dcp' to `ctp' because we thought that `connection translation
+    programs' gives a better idea of what the really do. 
+
+
+Version 1.2.1 - 19082003asg
+- --------------------------------
+
+  * Fixed a bug in dologin.
+    Now the use of ftp.proxy with a fixed server works again.
+
+
+Version 1.2.0 - 11072003asg
+- --------------------------------
+
+  * Looking in this file this numbering scheme displeased me.
+    From now on every beta release get a subnumber and official 
+    releases a major number.
+    So this new release will start with 1.2.0
+
+
+Version 1.1.7.pre3 - 09072003asg
+- --------------------------------
+
+  * Fixed missing line in the do_login function. Could solve unexpected
+    behaviour of ftp.proxy.
+    Mentioned by Michael A. Meiszl and Rasca Gmelch.
+
+
+Version 1.1.7.pre2 - 06042003asg
+- --------------------------------
+
+  * Another attempt to deal with an old problem: Suppose the client
+    lists an almost empty directory (or does any other small data
+    transmission with the remote server) is might happen that the
+    proxy receives and spools the data before the 150 response is
+    send to the client.  ftp.proxy uses the TCP_NODELAY socket
+    options since version 1.1.4 but what if the server (or upstream
+    proxy) causes the problem?
+
+    The proxy does now track if the 150 response arrived already and
+    the data transmission between client and server is delayed until
+    it has been received.
+ 
+
+Version 1.1.7.pre1 - 04042003asg
+- --------------------------------
+
+  * Introducing `dynamic configuration programs' aka DCP's.  In short
+    a DCP receives username and remote server as supplied by the user
+    and sends the proxy server the real FTP server the proxy should
+    connect to with perhaps different username and password.
+
+    Everything of this is optional.  Furthermore there is yet no
+    documentation because DCPs are work in progress and even the DCP
+    scheme is not fixed yet.  There is however a sample DCP named
+    operator.dcp showing how things basically work.
+
+    DCP's required changes to the source code.  Even if you do not
+    use DCP's the changes may influence the way ftp.proxy is working.
+
+    The DCP's are based on the idea of 'connection translation program'
+    from Damian Ivereigh and replaces this feature introduced in 1.1.6.beta6
+
+
+Version 1.1.6.beta8 - 25MAR2003asg
+- ----------------------------------
+
+  * Changed -D option: the proxy server port number must now be set
+    with the -D option.
+
+    
+Version 1.1.6.beta7 - 10FEB2003asg
+- ----------------------------------
+
+  * Added compile-help in src/Makefile for solaris and a putenv
+    workaround for the missing function.
+    Hope ftp.proxy will now compile on solaris without errors.
+    Mentioned by Gregoire Barbier, Lefteris Giakoumatos, 
+    Christophe Giraud-Briquet, Neil McCalden and others.
+
+  * Complete rewrite of multiline server response handling.
+    Handling is now much more RFC conform in this point.
+
+
+Version 1.1.6.beta6 - 22JAN2003asg
+- ----------------------------------
+
+  * Added sample script to start ftp.proxy in debug mode.
+	
+  * Added sample trp script.
+
+  * Do not fork ftp.proxy in daemon mode when debug option is set.
+
+  * Changed syslog calls to be more ANSI-C conform.
+
+  * Source code compatibility: changed the syslog's `%m' to `%s' with
+    a `strerror(errno)' argument.
+
+  * Added support connection translation program (short: trp's), mentioned
+    by Damian Ivereigh.
+
+  * Introduced version variable in Makefile.
+
+  * Added new command line option '-u' to allow usernames with a '@'
+    in it. Mentioned by Paul Dragicevich.
+    
+  * Changed GPL to current version.
+
+  * Changed getc_fd to handle servers that close the data connection.
+
+  * Changed proxy response on PASV because mozilla does not like it.
+
+  * Added daemon mode. Now you can start ftp.proxy as daemon using '-D'.
+    This is still experimental do not use this on productive environments.
+    The feature will be added official in the next release.
+    Additional parameters are required.
+
+  * Applied patch which fixes problems with multi-line server greetings,
+    as it appears on 'AppleShare IP FTP Server'. Mentioned by Menno Smits. 
+
+  * Changed default log facility to LOG_DAEMON. On Linux, FreeBSD and NetBSD
+    it is still LOG_FTP. 
+
+  * Modified cfputs() to send the line together with the CR/LF in one
+    packet to make broken firewalls happy.
+
+
+Version 1.1.5 - 04FEB2002asg
+- --------------------------
+
+  * Changed 'dologin()' so that ftp.proxy now supports server that do not
+    want a password after the 'USER' command.
+
+  * Added support for the FEAT command.
+    ftp.proxy only report features to the client that are support by both
+    the remote ftpserver and the ftp.proxy.
+
+  * Disabled the modification in  request handling made in 1.1.4 for
+    non-linux systems.  
+
+  * Added '-y' to allow any data ports on any remote interfaces.  Use this
+    option the following case:
+
+	The proxy connects to an FTP server which runs on a network card
+	with multiple IP numbers, a data connection is initiated (either
+	PORT or PASV) and the proxy refuses the connect because the remote
+	port is not on the interface the proxy uses for the data connection.
+	This happens if e.g. the remote server runs on eth0:2 but the
+	server uses eth0 for it's data connection port.  This is clearly
+	the server's fault, but anyway.  ftp.redhat.com was reported to
+	work that way.
+
+    Try to avoid using this option, because it can cause security problems.
+
+  * Changed log facility to LOG_FTP. (Hope this will work on all systems.) 
+
+  * ftp.proxy now allows blanks and other special charackters in passwords.
+    Added new parameter to allow this. (ftp.proxy -B)
+
+
+Version 1.1.4 - 21JAN2002asg
+- --------------------------
+
+  * Fixed potential problems after immediate initial unseccsesful up/downloads.
+
+  * Fixed error in `cmdtab[]'.  ftp.proxy expected parameter for PASV. 
+
+  * Small modification in request handling to prevent us from the rare case
+    that the ftp.proxy transfers data to/from the client before the client
+    has seen the "150 ..." message.
+
+
+Version 1.1.3 - 06DEC2001asg
+- --------------------------
+
+  * Fixed missing entry in syslog output. Mentioned by Markus Meitner. 
+  
+  * Changed array name MAXBSIZE to FTPMAXBSIZE to solve conflict when
+    compiling under NetBSD or SUN Solaris.  Mentioned by Denis Ahrens.  
+ 
+  * Changed path for `#include <wait.h>' to `<sys/wait.h>' in all sources
+    to improve compatibility to NetBSD or SUN Solaris. 
+    Mentioned by Denis Ahrens.  
+
+  * Added support for the XCUP command.
+
+
+Version 1.1.2 - 13NOV2001asg
+- --------------------------
+
+  * Added old X-Commands which are reintroduced by Microsoft W2K
+    FTP-Client (XCWD, XPWD, XMKD, XRMD) see RFC 1123 and RFC 775.   
+
+  * Added support for the MDTM command to check the modification
+    time of a file.
+
+  * Added new parameter to check Version. (ftp.proxy -V)
+
+  * Enhanced server handling:
+
+    - Attempt to solve early write events:  In some rare cases the FTP
+      server send data through the data channel before the command response
+      was received by the proxy.  ftp.proxy can detect such events but not
+      really handle it due to the way it works.  An artifical sleep(2)
+      might work as a work around.
+
+    - There is at least one type of firewall around that didn't like
+      FTP commands split into two TCP packets.  They disconnected from
+      the proxy without any notice.  This problem has been fixed now.
+
+    - ftp.proxy handles now multiline responses after a data transfer.
+
+  * Eliminated compiler warning.
+
+
+
+Version 1.0.7 - 11MAY2001asg
+- --------------------------
+
+  * Several manpage updates.
+
+
+Version 1.0.6 - 20DEC2000asg
+- --------------------------
+
+  * Added support for the SIZE command.
+
+
+Version 1.0.5 - 17DEC2000asg
+- --------------------------
+
+  * Introduced PASV mode.
+
+  * Several minor bug fixes.
+
+
+Version 1.0.4 - 27JUN2000asg
+- --------------------------
+
+  * Fixed bug in readline_fd()/getc_fd(): Some FTP servers send two
+    response lines in a single TCP/IP packet.  The second line was
+    not recognized by ftp.proxy before.
+
+  * Added -b switch to allow blanks in filenames (still not allowed
+    at the beginning or end) on customer request.
+
+
+Version 1.0.3 - 18MAY2000asg
+- --------------------------
+
+  * Added -p option to specify the data source port ftp.proxy uses
+    to connect to the client.  It's possible to tell ftp.proxy to
+    use the FTP standard data port 20 but this requires root perms
+    for the proxy.  Mentioned by Juergen Ilse via Wolfgang Zekoll.
+
+
+Version 1.0.2 - 23SEP1999wzk
+- --------------------------
+
+  * Look into sample-ccp for a command control and applied monitoring
+    example.
+
+  * Added `-b' option to allow blanks in FTP command parameters.
+
+  * Added the monitor mode.  This is experimental.
+
+  * Fixed a bug in the command lookup: an unknown command resulted in
+    a sigsegv.
+
+  * The ccp's output goes now to syslog while and it's stderr is sent to
+    the client.
+
+  * Fixed a file descriptor bug inside the acp and ccp handling code.
+
+
+Version 1.0.1 - 27AUG1999wzk
+- --------------------------
+
+  * Changed FTP session timeout to 15 minutes.
+
+  * Added support for command control programs.
+

@@ -1,0 +1,17 @@
+
+Begin3
+Title:			ftpproxy
+Version:		1.2.3
+Entered-date:		30 July 2004
+Description:		FTP proxy with optional access and command control
+			and client monitoring.
+Keywords:		FTP, proxy, firewall
+Author:			wzk@quietsche-entchen.de (Wolfgang Zekoll)
+			asg@ftpproxy.org (Andreas Schoenberg)
+Maintained-by:		asg@ftpproxy.org (Andreas Schoenberg)
+Primary-site:		http://www.ftpproxy.org/
+Alternate-site:
+Original-site:
+Platforms:
+Copying-policy:		GPL
+End
